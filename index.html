@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rita Summer Fest 2027 · 25–27 junio · Alcobendas</title>
+<meta name="description" content="Rita Summer Fest: tres días de música en directo, gastronomía y fiesta en Alcobendas (Madrid), del 25 al 27 de junio de 2027. Abonos desde 30 €.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#231C24; --body:#4A3F4B; --muted:#5E5260;
+  --cream:#FFF9F0; --sand:#F8EFE6; --pink:#F6DCE6; --brand:#D996AF; --rose:#F7C5D6;
+  --red:#B0213C; --red-dark:#8E1830; --yellow:#F7E58C; --lilac:#E2DAF5; --line:#EBDCD3; --white:#FFFFFF;
+  --radius:20px; --max:1200px; --gutter:clamp(20px,5vw,120px);
+  --display:"Anton", Impact, "Arial Narrow", sans-serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;overflow-x:clip;font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.5;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:var(--red)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:calc(var(--max) + 2*var(--gutter));margin:0 auto;padding:0 var(--gutter)}
+.section{padding:clamp(64px,8vw,112px) 0}
+.kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+.h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(42px,5.4vw,72px);line-height:1;letter-spacing:.01em;margin:0}
+.lead{font-size:clamp(17px,1.4vw,19px);color:var(--body);line-height:1.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 28px;border-radius:999px;font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .15s ease, background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-dark)}
+.btn-yellow{background:var(--yellow);color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.85)}
+.btn-lg{min-height:60px;font-size:17px;padding:0 32px}
+.pill{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:var(--brand)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:76px}
+.logo img{height:58px;width:auto}
+.nav-links{display:flex;gap:32px;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.nav-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta .btn{min-height:46px;padding:0 22px;font-size:15px}
+.burger{display:none;width:46px;height:46px;border-radius:999px;border:0;background:var(--cream);cursor:pointer;align-items:center;justify-content:center}
+.burger svg{width:22px;height:22px}
+
+/* HERO */
+.hero{position:relative;color:#fff;min-height:min(88vh,860px);display:flex;align-items:flex-end;overflow:hidden;background:#1a1218}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,28,36,.15) 0%,rgba(35,28,36,.35) 40%,rgba(35,28,36,.88) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-top:120px;padding-bottom:clamp(48px,7vw,96px)}
+.hero h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(76px,11vw,168px);line-height:.95;margin:22px 0 10px;letter-spacing:.01em}
+.hero h1 span{color:var(--rose)}
+.hero .sub{font-size:clamp(17px,1.6vw,21px);max-width:560px;margin:0 0 30px;color:#F3E9EE}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero .micro{font-size:14px;color:#E6DCE2;margin:18px 0 0}
+
+/* DATOS */
+.datos{background:var(--brand)}
+.datos ul{list-style:none;margin:0;padding:36px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.datos strong{display:block;font-family:var(--display);font-weight:400;font-size:clamp(30px,3.4vw,46px);line-height:1.05}
+.datos span{font-size:14px;font-weight:600}
+
+/* FESTIVAL */
+.festival-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px clamp(32px,6vw,96px);align-items:end}
+.espacios{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0;padding:0;list-style:none}
+.espacios li{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:600;font-size:14px}
+
+
+/* CARDS / CAROUSELS */
+.exp{background:var(--sand)}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--white);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.card .bar{height:6px}
+.card .body{padding:22px 24px 26px}
+.card h3{margin:0 0 6px;font-size:20px;font-weight:800}
+.card p{margin:0;color:var(--body);font-size:15px}
+.dots{display:none}
+
+/* CARTEL */
+.cartel{position:relative;background:var(--ink);color:#fff;overflow:hidden}
+.cartel-bg{position:absolute;left:0;top:-60px;width:100%;height:calc(100% + 60px);object-fit:cover;object-position:center bottom;opacity:.22}
+.cartel .wrap{position:relative}
+.cartel .kicker{color:var(--rose)}
+.cartel .lead{color:#E6DCE2;max-width:720px;margin:18px 0 36px}
+.day{background:var(--white);color:var(--ink);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:10px;min-height:240px}
+.day .artists{font-size:26px;font-weight:800;line-height:1.2;margin:8px 0 0}
+.day .sorpresa{color:var(--red);font-weight:700;font-size:14px;margin:0}
+.day a{margin-top:auto;font-weight:800;text-decoration:none}
+.note{font-size:13px;color:#BFB2BA;margin:18px 0 0}
+
+/* COMUNIDAD */
+.comunidad{background:var(--pink)}
+.com-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,80px);align-items:center;margin-bottom:48px}
+.com-grid img{border-radius:24px;aspect-ratio:4/5;object-fit:cover;width:100%;max-height:560px}
+.bignum{font-family:var(--sans);font-weight:900;font-size:clamp(56px,7vw,88px);color:var(--red);line-height:1;margin:18px 0 6px;letter-spacing:-.02em}
+.ig{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:999px}
+.quote{background:var(--white);border-radius:var(--radius);padding:24px;margin:0;display:flex;flex-direction:column;gap:16px}
+.quote blockquote{margin:0;font-size:17px;font-weight:500}
+.quote blockquote::before{content:"“";display:block;font-size:44px;line-height:.6;color:var(--red);font-weight:900;margin-bottom:10px}
+.quote figcaption{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.quote figcaption span{width:40px;height:40px;border-radius:999px;background:var(--brand);flex:none}
+.logos{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:36px}
+.logos p{margin:0 8px 0 0;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--muted)}
+.logos span{background:#fff;border-radius:12px;padding:12px 20px;font-size:14px;font-weight:800;color:var(--ink);letter-spacing:.01em}
+
+/* ABONOS */
+.abonos-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:40px}
+.urgency{background:var(--ink);color:#fff;font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px;margin:0}
+.passes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.pass{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px}
+.pass h3{margin:0;font-size:15px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.price{margin:0;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price b{font-size:58px;font-weight:900;line-height:1;letter-spacing:-.02em}
+.price small{font-size:15px;font-weight:600;color:var(--body)}
+.pass p{margin:0;color:var(--body)}
+.pass ul{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.pass li{position:relative;padding-left:28px;font-size:15px;font-weight:500}
+.pass li::before{content:"";position:absolute;left:2px;top:4px;width:12px;height:7px;border-left:2.5px solid var(--red);border-bottom:2.5px solid var(--red);transform:rotate(-45deg)}
+.pass .btn{margin-top:auto;width:100%}
+.days{display:flex;gap:8px;flex-wrap:wrap}
+.day-opt{min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid #D9C6BC;background:#fff;color:var(--ink);font:inherit;font-weight:800;font-size:14px;cursor:pointer}
+.day-opt[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.btn.is-off{background:#C9BDC3;color:#fff;cursor:not-allowed;transform:none}
+.pass.featured{background:var(--yellow);border:2px solid var(--ink);box-shadow:0 10px 0 var(--ink)}
+.pass.featured p,.pass.featured small{color:var(--ink)}
+.pass.featured .tag{background:var(--ink);color:var(--yellow)}
+.p1{order:1}.p3{order:2}.p2{order:3}
+.trust{display:flex;flex-wrap:wrap;gap:12px 32px;margin:36px 0 0;padding:0;list-style:none;font-weight:600;font-size:14px;color:var(--body)}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust svg{width:20px;height:20px;flex:none}
+
+/* FAQ */
+.faq{background:var(--sand)}
+.faq-grid{display:grid;grid-template-columns:1fr 1.7fr;gap:clamp(32px,6vw,80px)}
+details{background:var(--white);border:1px solid var(--line);border-radius:16px;margin-bottom:10px}
+summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:700;font-size:17px;display:flex;justify-content:space-between;gap:16px;min-height:60px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:24px;font-weight:500;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:0;padding:0 22px 20px;color:var(--body)}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:start}
+form{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,36px);display:flex;flex-direction:column;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:700;font-size:14px}
+.field input{height:52px;border:1.5px solid #D9C6BC;border-radius:12px;padding:0 16px;font:inherit;font-size:16px;background:var(--cream)}
+.field input:focus{outline:none;border-color:var(--ink)}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--body)}
+.check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--red);flex:none}
+.error{color:var(--red);font-size:13px;font-weight:600;margin:0;min-height:0}
+.success{display:none;background:var(--pink);border-radius:16px;padding:20px;font-weight:600}
+.form-note{font-size:13px;color:var(--muted);margin:0}
+
+/* PARTNERS */
+.partners{background:var(--sand)}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.partner{position:relative;color:#fff;border-radius:28px;overflow:hidden;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:flex-end;min-height:440px}
+.partner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.partner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,28,36,.2),rgba(35,28,36,.92) 70%)}
+.partner>*:not(img){position:relative;z-index:1}
+.partner .kicker{color:var(--rose)}
+.partner p{color:#EDE3E8;max-width:460px}
+.partner .contact{font-size:14px;margin:16px 0 0}
+.sost{background:var(--white);border:1px solid var(--line);border-radius:28px;padding:clamp(28px,4vw,48px)}
+.sost ul{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.sost li{display:flex;gap:14px;align-items:flex-start;font-weight:500;color:var(--body)}
+.sost li::before{content:"";flex:none;width:26px;height:26px;border-radius:999px;background:var(--pink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B0213C' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* CIERRE */
+.cierre{background:var(--ink);color:#fff}
+.cierre-top{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:center;padding-top:clamp(64px,8vw,104px);padding-bottom:clamp(48px,6vw,72px)}
+.cierre h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(52px,7vw,96px);line-height:1;margin:0}
+.cierre h2 span{color:var(--brand)}
+.cierre p{color:#E6DCE2;margin:14px 0 0}
+footer{border-top:1px solid #3E3440;padding:28px 0 36px;font-size:14px;color:#BFB2BA}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer a{color:#E6DCE2}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
+footer strong{color:#fff;letter-spacing:.08em}
+
+/* WHATSAPP */
+.wa{position:fixed;right:24px;bottom:24px;z-index:70;display:flex;align-items:center;gap:10px;background:#25D366;color:#fff;text-decoration:none;font-weight:800;font-size:15px;height:60px;padding:0 22px 0 16px;border-radius:999px;box-shadow:0 10px 28px rgba(0,0,0,.25);transition:transform .2s ease}
+.wa:hover{transform:translateY(-3px) scale(1.03)}
+.wa svg{width:30px;height:30px;flex:none}
+@media (max-width:767px){.wa{right:16px;bottom:96px;width:56px;height:56px;padding:0;justify-content:center}.wa span{display:none}}
+
+/* STICKY MÓVIL + TOAST */
+.sticky{display:none}
+.toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:14px 20px;border-radius:14px;font-weight:600;font-size:14px;opacity:0;pointer-events:none;transition:all .25s ease;z-index:80;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ====== TABLET (768–1023) ====== */
+@media (max-width:1023px){
+  .nav-links{display:none}
+  .burger{display:inline-flex}
+  .nav.open .nav-links{display:flex;flex-direction:column;gap:0;position:absolute;top:76px;left:0;right:0;background:var(--brand);padding:8px var(--gutter) 20px;box-shadow:0 12px 24px rgba(0,0,0,.12)}
+  .nav.open .nav-links a{display:block;padding:14px 0;font-size:18px;border-bottom:1px solid rgba(35,28,36,.15)}
+  .datos ul{grid-template-columns:repeat(2,1fr)}
+  .festival-grid,.com-grid,.faq-grid,.form-grid,.pg{grid-template-columns:1fr}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3.cartel-days{gap:14px}
+  .day .artists{font-size:21px}
+  .com-grid img{aspect-ratio:16/10;max-height:none}
+  .passes{grid-template-columns:1fr 1fr}
+  .p3{order:0;grid-column:1/-1}
+  /* opiniones en carrusel también en tablet */
+  .quotes{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);gap:16px;margin:0 calc(-1*var(--gutter));padding:0 var(--gutter) 6px;scrollbar-width:none}
+  .quotes::-webkit-scrollbar{display:none}
+  .quotes>*{flex:0 0 min(44%,320px);scroll-snap-align:start}
+  .quotes+.dots{display:flex}
+}
+
+/* ====== MÓVIL (≤767) ====== */
+@media (max-width:767px){
+  html{scroll-padding-top:72px}
+  .nav .wrap{height:68px}
+  .nav.open .nav-links{top:68px}
+  .logo img{height:48px}
+  .nav-cta .btn{display:none}
+  .hero{min-height:88svh}
+  .hero-bg{object-position:58% center}
+  .hero-ctas .btn{width:100%}
+  .hero-ctas .btn-ghost{min-height:48px}
+  .datos ul{gap:20px 12px;padding:28px 0}
+  .abonos-head{margin-bottom:24px}
+  /* carruseles */
+  .carousel{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);gap:14px;margin:0 calc(-1*var(--gutter));padding:0 var(--gutter) 10px;scrollbar-width:none}
+  .carousel::-webkit-scrollbar{display:none}
+  .carousel>*{flex:0 0 78%;scroll-snap-align:start}
+  .carousel.passes>*{flex-basis:84%}
+  .quotes>*{flex-basis:80%}
+  .carousel+.dots,.quotes+.dots{display:flex}
+  .p3{order:0}
+  .pass{padding:24px}
+  .pass .btn{font-size:15px;padding:0 14px}
+  .days{gap:6px;flex-wrap:nowrap}
+  .day-opt{padding:0 11px;font-size:13px}
+  .pass.featured{box-shadow:0 8px 0 var(--ink);margin-bottom:8px}
+  .sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:12px 20px calc(12px + env(safe-area-inset-bottom));align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -8px 24px rgba(35,28,36,.12);transform:translateY(110%);transition:transform .25s ease}
+  .sticky.show{transform:none}
+  .sticky small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+  .sticky b{font-size:18px;font-weight:900}
+  .sticky .btn{min-height:50px;padding:0 22px}
+  .cierre-top .btn{width:100%}
+  footer{padding-bottom:110px}
+}
+/* indicador de carrusel */
+.dots{align-items:center;justify-content:space-between;margin-top:14px}
+.dots span{display:flex;gap:8px}
+.dots i{width:8px;height:8px;border-radius:999px;background:#D9C6BC;transition:all .2s}
+.dots i.on{width:24px;background:var(--ink)}
+.dots em{font-style:normal;font-size:13px;font-weight:600;color:var(--muted)}
+.cartel .dots i{background:#6E5F6F}.cartel .dots i.on{background:#fff}.cartel .dots em{color:#BFB2BA}
+/* ANIMACIONES */
+@keyframes subir{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes zoomFondo{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-bg{animation:zoomFondo 6s ease-out both}
+.hero .wrap>*{animation:subir .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.12s}.hero .wrap>*:nth-child(3){animation-delay:.24s}.hero .wrap>*:nth-child(4){animation-delay:.36s}.hero .wrap>*:nth-child(5){animation-delay:.48s}
+/* aparición al hacer scroll solo con CSS: si el navegador no lo soporta, todo se ve sin animación */
+@supports (animation-timeline: view()){
+  .section .kicker,.section .h2,.section .lead,.card,.day,.quote,.pass,details,form,.partner,.sost,.com-grid img,.bignum,.logos,.trust,.cierre-top>*{animation:subir linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+}
+.card,.day,.pass,.quote{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover,.day:hover,.quote:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(35,28,36,.14)}
+.pass:not(.featured):hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(35,28,36,.12)}
+.card{overflow:hidden}.card img{transition:transform .6s ease}.card:hover img{transform:scale(1.06)}
+.btn-red:hover,.btn-yellow:hover,.btn-dark:hover{box-shadow:0 10px 24px rgba(176,33,60,.28)}
+.pass.featured .btn-red{animation:latido 2.6s ease-in-out 1.5s infinite}
+@keyframes latido{0%,100%{transform:none}50%{transform:scale(1.03)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+
+<!-- MENÚ -->
+<header class="nav" id="top">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Rita Summer Fest, inicio"><img src="img/logo.jpg" alt="Rita Summer Fest" width="100" height="58"></a>
+    <ul class="nav-links" id="menu">
+      <li><a href="#festival">Festival</a></li>
+      <li><a href="#cartel">Cartel</a></li>
+      <li><a href="#abonos">Abonos</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#abonos" class="btn btn-red">Comprar abono</a>
+      <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#231C24" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- 01 HERO -->
+<section class="hero" aria-labelledby="h1">
+  <img class="hero-bg" src="img/hero.jpg" alt="" fetchpriority="high" width="1656" height="1334">
+  <div class="wrap">
+    <span class="pill" style="background:var(--yellow);color:var(--ink)">25–27 junio 2027 · Alcobendas (Madrid)</span>
+    <h1 id="h1">El verano<br><span>se baila.</span></h1>
+    <p class="sub">Más que un festival, una forma de vivir el verano. Tres días de música en directo, gastronomía y fiesta con el sello de Rita la Bailaora, el tardeo de moda de Madrid.</p>
+    <div class="hero-ctas">
+      <a href="#abonos" class="btn btn-red btn-lg">Comprar abono · desde 30 €</a>
+      <a href="#cartel" class="btn btn-ghost">Ver cartel ↓</a>
+    </div>
+    <p class="micro">Precio de lanzamiento por tiempo limitado · Pago seguro · Entrada en tu móvil</p>
+  </div>
+</section>
+
+<!-- 01 DATOS CLAVE -->
+<section class="datos" aria-label="Datos del festival">
+  <div class="wrap">
+    <ul>
+      <li><strong>25–27 JUNIO</strong><span>2027 · viernes a domingo</span></li>
+      <li><strong>18:00 – 03:00</strong><span>horario cada día</span></li>
+      <li><strong>ALCOBENDAS</strong><span>Madrid</span></li>
+      <li><strong>10.000</strong><span>personas de aforo</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 02 LA EXPERIENCIA -->
+<section class="section exp" id="festival">
+  <div class="wrap">
+    <p class="kicker">La experiencia</p>
+    <h2 class="h2" style="margin-bottom:36px">Todo lo que vas a vivir.</h2>
+    <div class="grid-4 carousel" data-carousel>
+      <article class="card"><img src="img/musica.jpg" alt="Concierto en directo con el público bailando de noche" loading="lazy" style="object-position:55% center"><div class="bar" style="background:var(--yellow)"></div><div class="body"><h3>Música en directo y DJs</h3><p>Escenario principal con conciertos y sesiones de DJ toda la noche.</p></div></article>
+      <article class="card"><img src="img/gastronomia.jpg" alt="Amigas brindando con sus copas en la barra" loading="lazy" style="object-position:center 35%"><div class="bar" style="background:var(--rose)"></div><div class="body"><h3>Gastronomía y barras</h3><p>Foodtrucks para todos los gustos y barras para tomar algo entre concierto y concierto.</p></div></article>
+      <article class="card"><img src="img/amigas.jpg" alt="Grupo de amigas disfrutando en la terraza de Rita" loading="lazy" style="object-position:center 30%"><div class="bar" style="background:var(--lilac)"></div><div class="body"><h3>Zona VIP y descanso</h3><p>Ambiente premium y zonas de descanso para disfrutar con tu grupo.</p></div></article>
+      <article class="card"><img src="img/ruleta.jpg" alt="Asistente girando la ruleta de premios de Rita" loading="lazy" style="object-position:40% 40%"><div class="bar" style="background:var(--brand)"></div><div class="body"><h3>Shows y experiencias</h3><p>Animación toda la jornada, market, activaciones y sorpresas de nuestros partners.</p></div></article>
+    </div>
+    <div class="dots" aria-hidden="true"><span></span><em>Desliza para ver más →</em></div>
+
+
+  </div>
+</section>
+
+<!-- 04 CARTEL -->
+<section class="section cartel" id="cartel">
+  <img class="cartel-bg" src="img/musica.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="kicker">Cartel</p>
+    <h2 class="h2">Un cartel para cantar,<br>bailar y disfrutar.</h2>
+    <p class="lead">Artistas de la talla de Abraham Mateo, Miguel Campello, Nyno Vargas y Joana Santos, y promesas como Fraderita y Salistre. Una programación pensada para reunir a diferentes generaciones.</p>
+    <div class="grid-3 cartel-days carousel" data-carousel>
+      <article class="day"><span class="pill" style="background:var(--yellow);align-self:flex-start">Viernes 25</span><p class="artists">Abraham Mateo<br>Fraderita</p><p class="sorpresa">+ Artista sorpresa</p><a href="#abonos">Quiero ir este día →</a></article>
+      <article class="day"><span class="pill" style="background:var(--rose);align-self:flex-start">Sábado 26</span><p class="artists">Salistre<br>Nyno Vargas</p><p class="sorpresa">+ Artista sorpresa</p><a href="#abonos">Quiero ir este día →</a></article>
+      <article class="day"><span class="pill" style="background:var(--lilac);align-self:flex-start">Domingo 27</span><p class="artists">Joana Santos<br>Miguel Campello</p><p class="sorpresa">+ Artista sorpresa</p><a href="#abonos">Quiero ir este día →</a></article>
+    </div>
+    <div class="dots" aria-hidden="true"><span></span><em>Desliza para ver más →</em></div>
+    <p class="note">Artistas a confirmar. Reparto por días orientativo. Horario del festival: 18:00 – 03:00.</p>
+  </div>
+</section>
+
+<!-- 05 COMUNIDAD -->
+<section class="section comunidad">
+  <div class="wrap">
+    <div class="com-grid">
+      <img src="img/comunidad.jpg" alt="Camiseta de Rita la Bailaora con el lema La vida es hoy" loading="lazy">
+      <div>
+        <p class="kicker">Comunidad</p>
+        <h2 class="h2">La comunidad ya vive Rita.</h2>
+        <p class="bignum">+700.000</p>
+        <p style="font-weight:700;font-size:18px;margin:0">reproducciones mensuales en las redes de Rita la Bailaora</p>
+        <a class="ig" href="https://www.instagram.com/ritalabailaoramadrid/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>
+          Síguenos en @ritalabailaoramadrid
+        </a>
+      </div>
+    </div>
+    <div class="grid-3 quotes" data-carousel>
+      <figure class="quote"><blockquote>[Comentario real de un seguidor de @ritalabailaoramadrid]</blockquote><figcaption><span></span>[Nombre] · [@usuario]</figcaption></figure>
+      <figure class="quote"><blockquote>[Comentario real de un seguidor de @ritalabailaoramadrid]</blockquote><figcaption><span></span>[Nombre] · [@usuario]</figcaption></figure>
+      <figure class="quote"><blockquote>[Comentario real de un seguidor de @ritalabailaoramadrid]</blockquote><figcaption><span></span>[Nombre] · [@usuario]</figcaption></figure>
+    </div>
+    <div class="dots" aria-hidden="true"><span></span><em>Desliza para ver más →</em></div>
+    <div class="logos"><p>CON EL APOYO DE</p><span>Ayuntamiento de Alcobendas</span><span>Cerveza Victoria Málaga</span><span>Buena Boca</span><span>Fourvenues</span></div>
+  </div>
+</section>
+
+<!-- 06 ABONOS -->
+<section class="section" id="abonos">
+  <div class="wrap">
+    <p class="kicker">Abonos</p>
+    <div class="abonos-head">
+      <h2 class="h2">Tu verano. Tu abono.</h2>
+      <p class="urgency">Precio de lanzamiento · aforo limitado a 10.000 personas</p>
+    </div>
+    <div class="passes carousel" data-carousel>
+      <article class="pass p1">
+        <h3>1 día</h3>
+        <p class="price"><b>30 €</b></p>
+        <p>Elige tu día favorito:</p>
+        <div class="days" data-max="1" role="group" aria-label="Elige un día"><button type="button" class="day-opt" aria-pressed="false" data-day="Viernes 25">Vie 25</button><button type="button" class="day-opt" aria-pressed="false" data-day="Sábado 26">Sáb 26</button><button type="button" class="day-opt" aria-pressed="false" data-day="Domingo 27">Dom 27</button></div>
+        <ul><li>Acceso al recinto el día elegido</li><li>Conciertos y DJs de ese día</li><li>Zona gastronómica y de descanso</li></ul>
+        <a href="#" class="btn btn-red js-buy is-off" data-abono="1 día" data-need="1" aria-disabled="true">Elige tu día</a>
+      </article>
+      <article class="pass p3 featured">
+        <h3>3 días <span class="pill tag">Recomendado</span></h3>
+        <p class="price"><b>70 €</b><small>≈ 23 € / día</small></p>
+        <p>Vive el festival completo, de viernes a domingo.</p>
+        <ul><li>Acceso los tres días</li><li>Todos los conciertos y artistas sorpresa</li><li>Zona gastronómica y de descanso</li></ul>
+        <a href="#" class="btn btn-red btn-lg js-buy" data-abono="3 días">Comprar abono completo</a>
+      </article>
+      <article class="pass p2">
+        <h3>2 días</h3>
+        <p class="price"><b>50 €</b><small>25 € / día</small></p>
+        <p>Combina los dos días que quieras:</p>
+        <div class="days" data-max="2" role="group" aria-label="Elige dos días"><button type="button" class="day-opt" aria-pressed="false" data-day="Viernes 25">Vie 25</button><button type="button" class="day-opt" aria-pressed="false" data-day="Sábado 26">Sáb 26</button><button type="button" class="day-opt" aria-pressed="false" data-day="Domingo 27">Dom 27</button></div>
+        <ul><li>Acceso los días elegidos</li><li>Conciertos y DJs de esos días</li><li>Zona gastronómica y de descanso</li></ul>
+        <a href="#" class="btn btn-red js-buy is-off" data-abono="2 días" data-need="2" aria-disabled="true">Elige tus 2 días</a>
+      </article>
+    </div>
+    <div class="dots" aria-hidden="true"><span></span><em>Desliza para ver más →</em></div>
+    <ul class="trust">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#231C24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro con Fourvenues</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#231C24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Entrada directa en tu móvil</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="#231C24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg><a href="#faq" style="color:inherit">Condiciones de compra</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 07 PREGUNTAS -->
+<section class="section faq" id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <p class="kicker">Preguntas frecuentes</p>
+      <h2 class="h2">Antes de comprar…</h2>
+      <p class="lead">¿Otra duda? Escríbenos a <a href="mailto:info@ritalabailaora.com">info@ritalabailaora.com</a> o llama al <a href="tel:+34628905030">628 90 50 30</a>.</p>
+    </div>
+    <div>
+      <details open><summary>¿Dónde y cuándo es?</summary><p>Del 25 al 27 de junio de 2027 en Alcobendas (Madrid), de 18:00 a 03:00 cada día.</p></details>
+      <details><summary>¿Qué incluye cada abono?</summary><p>Acceso al recinto los días elegidos, con todos los conciertos y DJs de esos días, la zona gastronómica y las zonas de descanso. La zona VIP tiene condiciones propias.</p></details>
+      <details><summary>¿Cómo compro y recibo mi entrada?</summary><p>Elige tu abono, pulsa «Comprar» y completa el pago en Fourvenues, nuestra ticketera oficial. Recibirás la entrada en tu móvil al momento.</p></details>
+      <details><summary>¿Cómo llego al recinto?</summary><p>El recinto está en Alcobendas (Madrid). Publicaremos el mapa, el transporte público recomendado y la información de parking antes del festival.</p></details>
+      <details><summary>¿Pueden venir menores?</summary><p>Las condiciones de acceso para menores se publicarán junto con las condiciones de compra.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 08 NOVEDADES (FORMULARIO) -->
+<section class="section" id="novedades">
+  <div class="wrap form-grid">
+    <div>
+      <p class="kicker">Novedades</p>
+      <h2 class="h2">¿Aún no te decides? Te avisamos.</h2>
+      <p class="lead">Sé el primero en saber quiénes son los artistas sorpresa y cuándo acaba el precio de lanzamiento.</p>
+      <p style="font-weight:700">¿Ya lo tienes claro? <a href="#abonos">Comprar abono →</a></p>
+    </div>
+    <form id="form" novalidate>
+      <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Tu nombre" required></div>
+      <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required></div>
+      <label class="check"><input type="checkbox" id="privacidad" required><span>He leído y acepto la <a href="#privacidad">política de privacidad</a>. *</span></label>
+      <label class="check"><input type="checkbox" id="marketing"><span>Quiero recibir novedades del festival por email.</span></label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+      <p class="error" id="error" role="alert"></p>
+      <button class="btn btn-dark btn-lg" type="submit">Quiero enterarme</button>
+      <p class="form-note">Este formulario no reserva entradas. Recibirás nuestras novedades en tu correo.</p>
+      <div class="success" id="success" role="status" tabindex="-1"></div>
+    </form>
+  </div>
+</section>
+
+<!-- 09 PARTNERS + SOSTENIBILIDAD -->
+<section class="section partners">
+  <div class="wrap pg">
+    <div class="partner">
+      <img src="img/gastronomia.jpg" alt="" loading="lazy">
+      <p class="kicker">Partners</p>
+      <h2 class="h2" style="font-size:clamp(40px,4.4vw,60px)">¿Eres una marca?</h2>
+      <p>Conecta con miles de asistentes: naming sponsor, patrocinio oficial, activaciones, hospitality VIP y sampling.</p>
+      <div><a class="btn btn-yellow" href="mailto:info@ritalabailaora.com?subject=Partners%20Rita%20Summer%20Fest">Quiero ser partner</a></div>
+      <p class="contact">info@ritalabailaora.com · 628 90 50 30</p>
+    </div>
+    <div class="sost">
+      <p class="kicker">Sostenibilidad</p>
+      <h2 class="h2" style="font-size:clamp(40px,4.4vw,60px)">Un festival responsable.</h2>
+      <ul>
+        <li>Gestión responsable de residuos y reducción de plásticos</li>
+        <li>Uso eficiente de recursos e instalaciones</li>
+        <li>Apoyo a la música en directo y al talento emergente</li>
+        <li>Impacto positivo en la economía y la actividad local</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 10 CIERRE -->
+<section class="cierre" aria-label="Cierre">
+  <div class="wrap cierre-top">
+    <div>
+      <h2>La vida es hoy.<br><span>La vida es Rita.</span></h2>
+      <p>Rita Summer Fest. Donde el verano cobra vida. 25–27 junio 2027 · Alcobendas.</p>
+    </div>
+    <a href="#abonos" class="btn btn-yellow btn-lg">Comprar abono · desde 30 €</a>
+  </div>
+  <footer>
+    <div class="wrap">
+      <div><strong>RITA SUMMER FEST</strong><br>Organiza: Rita la Bailaora · <a href="mailto:info@ritalabailaora.com">info@ritalabailaora.com</a> · <a href="tel:+34628905030">628 90 50 30</a></div>
+      <nav aria-label="Legal y redes"><a href="https://www.instagram.com/ritalabailaoramadrid/" target="_blank" rel="noopener">Instagram</a><a href="#aviso-legal">Aviso legal</a><a href="#privacidad">Privacidad</a><a href="#cookies">Cookies</a></nav>
+    </div>
+  </footer>
+</section>
+
+<!-- CTA FIJO (solo móvil) -->
+<div class="sticky" id="sticky" aria-hidden="true">
+  <div><small>25–27 junio · Alcobendas</small><b>Desde 30 €</b></div>
+  <a href="#abonos" class="btn btn-red" tabindex="-1">Comprar abono</a>
+</div>
+<a class="wa" href="https://chat.whatsapp.com/KbI3IV7sk5aFaBwSy4BPFX" target="_blank" rel="noopener" aria-label="Únete al grupo de WhatsApp de Rita Summer Fest">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.8 2 6.8L3.2 29l6.6-1.7c1.9 1 4 1.6 6.2 1.6 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.5c-2 0-3.9-.5-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.8C5.2 9.9 10 5.2 16 5.2s10.8 4.7 10.8 10.6S22 26.5 16 26.5zm5.9-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+  <span>Únete al grupo</span>
+</a>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// Menú móvil/tablet
+const nav = document.querySelector('.nav'), burger = document.querySelector('.burger');
+burger.addEventListener('click', () => { const o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); burger.setAttribute('aria-expanded', false); }));
+
+// Indicadores de carrusel
+document.querySelectorAll('[data-carousel]').forEach(c => {
+  const dots = c.nextElementSibling && c.nextElementSibling.classList.contains('dots') ? c.nextElementSibling.querySelector('span') : null;
+  if (!dots) return;
+  const items = [...c.children];
+  dots.innerHTML = items.map(() => '<i></i>').join('');
+  const update = () => {
+    const visual = [...items].sort((a, b) => a.offsetLeft - b.offsetLeft);
+    let idx = 0, best = Infinity;
+    visual.forEach((el, i) => { const d = Math.abs(el.offsetLeft - c.offsetLeft - c.scrollLeft - parseFloat(getComputedStyle(c).paddingLeft)); if (d < best) { best = d; idx = i; } });
+    [...dots.children].forEach((d, i) => d.classList.toggle('on', i === idx));
+  };
+  c.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  window.addEventListener('resize', update); update();
+});
+
+// Barra fija de compra en móvil: aparece tras el hero y se oculta en la sección de abonos
+const sticky = document.getElementById('sticky'), hero = document.querySelector('.hero'), abonos = document.getElementById('abonos');
+let pastHero = false, inAbonos = false;
+const sync = () => sticky.classList.toggle('show', pastHero && !inAbonos);
+new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; sync(); }).observe(hero);
+new IntersectionObserver(([e]) => { inAbonos = e.isIntersecting; sync(); }, { threshold: 0.15 }).observe(abonos);
+
+// Selección de días en los abonos de 1 y 2 días
+document.querySelectorAll('.days').forEach(g => {
+  const max = +g.dataset.max, card = g.closest('.pass'), btn = card.querySelector('.js-buy'), order = [];
+  const sync = () => {
+    g.querySelectorAll('.day-opt').forEach(o => o.setAttribute('aria-pressed', order.includes(o) ? 'true' : 'false'));
+    const ok = order.length === max;
+    btn.classList.toggle('is-off', !ok); btn.setAttribute('aria-disabled', ok ? 'false' : 'true');
+    const sorted = [...g.querySelectorAll('.day-opt')].filter(o => order.includes(o)).map(o => o.textContent);
+    btn.textContent = ok ? 'Comprar · ' + sorted.join(' + ') : (max === 1 ? 'Elige tu día' : order.length ? 'Elige 1 día más' : 'Elige tus 2 días');
+  };
+  g.querySelectorAll('.day-opt').forEach(o => o.addEventListener('click', () => {
+    const i = order.indexOf(o);
+    if (i >= 0) order.splice(i, 1); else { order.push(o); if (order.length > max) order.shift(); }
+    sync();
+  }));
+});
+
+// Botones de compra (la ticketera se conecta en la versión WordPress)
+const toast = document.getElementById('toast');
+document.querySelectorAll('.js-buy').forEach(b => b.addEventListener('click', e => {
+  e.preventDefault();
+  if (b.classList.contains('is-off')) { const g = b.closest('.pass').querySelector('.days'); g.querySelector('.day-opt').focus(); toast.textContent = b.dataset.need === '1' ? 'Elige primero tu día.' : 'Elige primero tus dos días.'; toast.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => toast.classList.remove('show'), 2200); return; }
+  const dias = [...b.closest('.pass').querySelectorAll('.day-opt[aria-pressed="true"]')].map(o => o.dataset.day).join(' y ');
+  toast.textContent = 'Abono ' + b.dataset.abono + (dias ? ' (' + dias + ')' : '') + ': aquí se abrirá Fourvenues para pagar.';
+  toast.classList.add('show'); clearTimeout(toast._t); toast._t = setTimeout(() => toast.classList.remove('show'), 2800);
+}));
+
+// Formulario de novedades
+const form = document.getElementById('form'), err = document.getElementById('error'), ok = document.getElementById('success');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const nombre = form.nombre.value.trim(), email = form.email.value.trim();
+  if (!nombre) { err.textContent = 'Escribe tu nombre.'; form.nombre.focus(); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { err.textContent = 'Revisa tu correo electrónico.'; form.email.focus(); return; }
+  if (!form.privacidad.checked) { err.textContent = 'Necesitamos que aceptes la política de privacidad.'; form.privacidad.focus(); return; }
+  err.textContent = '';
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true; btn.textContent = 'Enviando…';
+  // Envío real del formulario por email (FormSubmit)
+  fetch('https://formsubmit.co/ajax/info@ritalabailaora.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: 'Nueva alta en novedades · Rita Summer Fest',
+      _template: 'table',
+      _captcha: 'false',
+      _honey: form._honey.value,
+      Nombre: nombre,
+      Email: email,
+      'Acepta privacidad': 'Sí',
+      'Acepta comunicaciones': form.marketing.checked ? 'Sí' : 'No'
+    })
+  }).then(r => r.json()).then(d => {
+    if (String(d.success) !== 'true') throw new Error(d.message || 'error');
+    [...form.querySelectorAll('.field, .check, button, .form-note')].forEach(el => el.style.display = 'none');
+    ok.textContent = '¡Gracias, ' + nombre + '! Te avisaremos en ' + email + ' con las novedades del festival.';
+    ok.style.display = 'block'; ok.focus();
+  }).catch(() => {
+    btn.disabled = false; btn.textContent = 'Quiero enterarme';
+    err.textContent = 'No hemos podido enviarlo. Inténtalo de nuevo en un momento.';
+  });
+});
+</script>
+</body>
+</html>

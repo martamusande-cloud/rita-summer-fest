@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rita Summer Fest · Landing en PC, tablet y móvil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#231C24;--brand:#D996AF;--cream:#FFF9F0;--muted:#5E5260;--red:#B0213C}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream)}
+header{background:var(--brand);padding:28px clamp(20px,4vw,56px);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+h1{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(32px,4vw,52px);line-height:1;margin:0}
+header p{margin:6px 0 0;font-weight:600}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--red);color:#fff;font-weight:800;text-decoration:none}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:24px clamp(20px,4vw,56px) 0}
+.tabs button{font:inherit;font-weight:700;border:1.5px solid var(--ink);background:transparent;border-radius:999px;padding:10px 18px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.stage{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;justify-content:center;padding:32px clamp(20px,4vw,56px) 64px}
+.device{display:flex;flex-direction:column;align-items:center;gap:12px}
+.device h2{margin:0;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.frame{background:var(--ink);border-radius:28px;padding:14px;box-shadow:0 24px 50px rgba(35,28,36,.25)}
+.screen{overflow:hidden;border-radius:16px;background:#fff;position:relative}
+.screen iframe{border:0;transform-origin:0 0;display:block;background:#fff}
+.pc .frame{border-radius:18px;padding:12px 12px 28px}
+.hidden{display:none}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 40px}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Rita Summer Fest · Landing</h1>
+    <p>La misma web en ordenador, tablet y móvil. Cada pantalla se puede desplazar e interactuar.</p>
+  </div>
+  <a class="btn" href="index.html" target="_blank" rel="noopener">Abrir la web completa ↗</a>
+</header>
+<div class="tabs" role="group" aria-label="Elegir dispositivo">
+  <button type="button" data-show="all" aria-pressed="true">Los tres</button>
+  <button type="button" data-show="pc" aria-pressed="false">PC</button>
+  <button type="button" data-show="tablet" aria-pressed="false">Tablet</button>
+  <button type="button" data-show="movil" aria-pressed="false">Móvil</button>
+</div>
+<main class="stage">
+  <section class="device pc" data-d="pc"><h2>PC · 1440 px</h2><div class="frame"><div class="screen" data-w="1440" data-h="900"><iframe title="Web en PC" src="index.html" loading="lazy"></iframe></div></div></section>
+  <section class="device tablet" data-d="tablet"><h2>Tablet · 768 px</h2><div class="frame"><div class="screen" data-w="768" data-h="1024"><iframe title="Web en tablet" src="index.html" loading="lazy"></iframe></div></div></section>
+  <section class="device movil" data-d="movil"><h2>Móvil · 390 px</h2><div class="frame"><div class="screen" data-w="390" data-h="844"><iframe title="Web en móvil" src="index.html" loading="lazy"></iframe></div></div></section>
+</main>
+<footer>Rita Summer Fest · 25–27 junio 2027 · Alcobendas (Madrid)</footer>
+<script>
+// Escala cada pantalla para que quepa, manteniendo su ancho real (así la web muestra su versión PC, tablet o móvil)
+const sizes = { all: { pc: 0.36, tablet: 0.36, movil: 0.52 }, pc: { pc: 0.85 }, tablet: { tablet: 0.8 }, movil: { movil: 1 } };
+let mode = 'all';
+function layout() {
+  const vw = Math.min(window.innerWidth, 1800);
+  document.querySelectorAll('.device').forEach(d => {
+    const key = d.dataset.d, show = mode === 'all' || mode === key;
+    d.classList.toggle('hidden', !show);
+    if (!show) return;
+    const s = d.querySelector('.screen'), f = d.querySelector('iframe');
+    const w = +s.dataset.w, h = +s.dataset.h;
+    let k = sizes[mode][key];
+    k = Math.min(k, (vw - 80) / (w + 40));
+    f.style.width = w + 'px'; f.style.height = h + 'px'; f.style.transform = `scale(${k})`;
+    s.style.width = Math.round(w * k) + 'px'; s.style.height = Math.round(h * k) + 'px';
+  });
+}
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  mode = b.dataset.show;
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-pressed', x === b));
+  layout();
+}));
+window.addEventListener('resize', layout); layout();
+</script>
+</body>
+</html>
