@@ -116,6 +116,8 @@ a{color:var(--red)}
 
 /* ABONOS */
 .abonos-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:40px}
+.proof{margin:-20px 0 28px;font-size:15px;font-weight:600;color:var(--body);display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.proof .stars{font-size:17px}
 .urgency{background:var(--ink);color:#fff;font-weight:700;font-size:14px;padding:11px 18px;border-radius:999px;margin:0}
 .passes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
 .pass{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:14px}
@@ -235,6 +237,7 @@ footer strong{color:#fff;letter-spacing:.08em}
   .hero-ctas .btn-ghost{min-height:48px}
   .datos ul{gap:20px 12px;padding:28px 0}
   .abonos-head{margin-bottom:24px}
+  .proof{margin:-8px 0 20px;font-size:14px}
   /* carruseles */
   .carousel{display:flex !important;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--gutter);gap:14px;margin:0 calc(-1*var(--gutter));padding:0 var(--gutter) 10px;scrollbar-width:none}
   .carousel::-webkit-scrollbar{display:none}
@@ -349,7 +352,7 @@ footer strong{color:#fff;letter-spacing:.08em}
   </div>
 </section>
 
-<!-- 04 CARTEL -->
+<!-- 03 CARTEL -->
 <section class="section cartel" id="cartel">
   <img class="cartel-bg" src="img/musica.jpg" alt="" loading="lazy">
   <div class="wrap">
@@ -366,33 +369,7 @@ footer strong{color:#fff;letter-spacing:.08em}
   </div>
 </section>
 
-<!-- 05 COMUNIDAD -->
-<section class="section comunidad">
-  <div class="wrap">
-    <div class="com-grid">
-      <img src="img/comunidad.jpg" alt="Camiseta de Rita la Bailaora con el lema La vida es hoy" loading="lazy">
-      <div>
-        <p class="kicker">Comunidad</p>
-        <h2 class="h2">La comunidad ya vive Rita.</h2>
-        <p class="bignum">+700.000</p>
-        <p style="font-weight:700;font-size:18px;margin:0">reproducciones mensuales en las redes de Rita la Bailaora</p>
-        <a class="ig" href="https://www.instagram.com/ritalabailaoramadrid/" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>
-          Síguenos en @ritalabailaoramadrid
-        </a>
-      </div>
-    </div>
-    <div class="grid-3 quotes" data-carousel>
-      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>¡Una experiencia de 10! Muy buen ambiente, buena música y un trato excelente por parte de todo el personal.</blockquote><figcaption><span style="background:#7E57C2">A</span><em><b>Aitor L.</b> · Reseña en Google</em></figcaption></figure>
-      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>Se pasa un rato muy agradable en compañía del grupo en directo y la comida me sorprendió, ¡sobre todo la pizza!</blockquote><figcaption><span style="background:#7CA24A">R</span><em><b>Rosa María M.</b> · Reseña en Google</em></figcaption></figure>
-      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>Buen tardeo. Trabajo excepcional del personal.</blockquote><figcaption><span style="background:#3E8FA0">E</span><em><b>Eliseo R.</b> · Reseña en Google</em></figcaption></figure>
-    </div>
-    <div class="dots" aria-hidden="true"><span></span><em>Desliza para ver más →</em></div>
-    <div class="logos"><p>CON EL APOYO DE</p><span>Ayuntamiento de Alcobendas</span><span>Cerveza Victoria Málaga</span><span>Buena Boca</span><span>Fourvenues</span></div>
-  </div>
-</section>
-
-<!-- 06 ABONOS -->
+<!-- 04 ABONOS -->
 <section class="section" id="abonos">
   <div class="wrap">
     <p class="kicker">Abonos</p>
@@ -400,6 +377,7 @@ footer strong{color:#fff;letter-spacing:.08em}
       <h2 class="h2">Tu verano. Tu abono.</h2>
       <p class="urgency">Precio de lanzamiento · aforo limitado a 10.000 personas</p>
     </div>
+    <p class="proof"><span class="stars" aria-hidden="true">★★★★★</span> Valorado 5/5 en Google · +700.000 reproducciones en redes</p>
     <div class="passes carousel" data-carousel>
       <article class="pass p1">
         <h3>1 día</h3>
@@ -431,6 +409,32 @@ footer strong{color:#fff;letter-spacing:.08em}
       <li><svg viewBox="0 0 24 24" fill="none" stroke="#231C24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Entrada directa en tu móvil</li>
       <li><svg viewBox="0 0 24 24" fill="none" stroke="#231C24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg><a href="#faq" style="color:inherit">Condiciones de compra</a></li>
     </ul>
+  </div>
+</section>
+
+<!-- 05 COMUNIDAD -->
+<section class="section comunidad">
+  <div class="wrap">
+    <div class="com-grid">
+      <img src="img/comunidad.jpg" alt="Camiseta de Rita la Bailaora con el lema La vida es hoy" loading="lazy">
+      <div>
+        <p class="kicker">Comunidad</p>
+        <h2 class="h2">La comunidad ya vive Rita.</h2>
+        <p class="bignum">+700.000</p>
+        <p style="font-weight:700;font-size:18px;margin:0">reproducciones mensuales en las redes de Rita la Bailaora</p>
+        <a class="ig" href="https://www.instagram.com/ritalabailaoramadrid/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>
+          Síguenos en @ritalabailaoramadrid
+        </a>
+      </div>
+    </div>
+    <div class="grid-3 quotes" data-carousel>
+      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>¡Una experiencia de 10! Muy buen ambiente, buena música y un trato excelente por parte de todo el personal.</blockquote><figcaption><span style="background:#7E57C2">A</span><em><b>Aitor L.</b> · Reseña en Google</em></figcaption></figure>
+      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>Se pasa un rato muy agradable en compañía del grupo en directo y la comida me sorprendió, ¡sobre todo la pizza!</blockquote><figcaption><span style="background:#7CA24A">R</span><em><b>Rosa María M.</b> · Reseña en Google</em></figcaption></figure>
+      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>Buen tardeo. Trabajo excepcional del personal.</blockquote><figcaption><span style="background:#3E8FA0">E</span><em><b>Eliseo R.</b> · Reseña en Google</em></figcaption></figure>
+    </div>
+    <div class="dots" aria-hidden="true"><span></span><em>Desliza para ver más →</em></div>
+    <div class="logos"><p>CON EL APOYO DE</p><span>Ayuntamiento de Alcobendas</span><span>Cerveza Victoria Málaga</span><span>Buena Boca</span><span>Fourvenues</span></div>
   </div>
 </section>
 
