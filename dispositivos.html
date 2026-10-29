@@ -35,7 +35,7 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 40px}
     <h1>Rita Summer Fest · Landing</h1>
     <p>La misma web en ordenador, tablet y móvil. Cada pantalla se puede desplazar e interactuar.</p>
   </div>
-  <a class="btn" href="index.html" target="_blank" rel="noopener">Abrir la web completa ↗</a>
+  <a class="btn" href="index.html?v=1" target="_blank" rel="noopener">Abrir la web completa ↗</a>
 </header>
 <div class="tabs" role="group" aria-label="Elegir dispositivo">
   <button type="button" data-show="all" aria-pressed="true">Los tres</button>
@@ -44,9 +44,9 @@ footer{text-align:center;color:var(--muted);font-size:14px;padding:0 20px 40px}
   <button type="button" data-show="movil" aria-pressed="false">Móvil</button>
 </div>
 <main class="stage">
-  <section class="device pc" data-d="pc"><h2>PC · 1440 px</h2><div class="frame"><div class="screen" data-w="1440" data-h="900"><iframe title="Web en PC" src="index.html" loading="lazy"></iframe></div></div></section>
-  <section class="device tablet" data-d="tablet"><h2>Tablet · 768 px</h2><div class="frame"><div class="screen" data-w="768" data-h="1024"><iframe title="Web en tablet" src="index.html" loading="lazy"></iframe></div></div></section>
-  <section class="device movil" data-d="movil"><h2>Móvil · 390 px</h2><div class="frame"><div class="screen" data-w="390" data-h="844"><iframe title="Web en móvil" src="index.html" loading="lazy"></iframe></div></div></section>
+  <section class="device pc" data-d="pc"><h2>PC · 1440 px</h2><div class="frame"><div class="screen" data-w="1440" data-h="900"><iframe title="Web en PC" src="index.html?v=1" loading="lazy"></iframe></div></div></section>
+  <section class="device tablet" data-d="tablet"><h2>Tablet · 768 px</h2><div class="frame"><div class="screen" data-w="768" data-h="1024"><iframe title="Web en tablet" src="index.html?v=1" loading="lazy"></iframe></div></div></section>
+  <section class="device movil" data-d="movil"><h2>Móvil · 390 px</h2><div class="frame"><div class="screen" data-w="390" data-h="844"><iframe title="Web en móvil" src="index.html?v=1" loading="lazy"></iframe></div></div></section>
 </main>
 <footer>Rita Summer Fest · 25–27 junio 2027 · Alcobendas (Madrid)</footer>
 <script>
@@ -72,6 +72,10 @@ document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click
   document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-pressed', x === b));
   layout();
 }));
+// cada pantalla pide siempre la última versión de la web (evita ver una copia antigua guardada)
+const v = Date.now();
+document.querySelectorAll('iframe').forEach(f => f.src = 'index.html?v=' + v);
+document.querySelector('header .btn').href = 'index.html?v=' + v;
 window.addEventListener('resize', layout); layout();
 </script>
 </body>
