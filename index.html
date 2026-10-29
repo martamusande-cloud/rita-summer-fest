@@ -104,9 +104,12 @@ a{color:var(--red)}
 .ig{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:999px}
 .quote{background:var(--white);border-radius:var(--radius);padding:24px;margin:0;display:flex;flex-direction:column;gap:16px}
 .quote blockquote{margin:0;font-size:17px;font-weight:500}
-.quote blockquote::before{content:"“";display:block;font-size:44px;line-height:.6;color:var(--red);font-weight:900;margin-bottom:10px}
+.quote blockquote{flex:1}
 .quote figcaption{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
-.quote figcaption span{width:40px;height:40px;border-radius:999px;background:var(--brand);flex:none}
+.quote figcaption span{width:40px;height:40px;border-radius:999px;background:var(--brand);flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:17px}
+.quote figcaption b{color:var(--ink)}
+.quote figcaption em{font-style:normal}
+.stars{margin:0;color:#F4B400;font-size:18px;letter-spacing:2px}
 .logos{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:36px}
 .logos p{margin:0 8px 0 0;font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--muted)}
 .logos span{background:#fff;border-radius:12px;padding:12px 20px;font-size:14px;font-weight:800;color:var(--ink);letter-spacing:.01em}
@@ -380,9 +383,9 @@ footer strong{color:#fff;letter-spacing:.08em}
       </div>
     </div>
     <div class="grid-3 quotes" data-carousel>
-      <figure class="quote"><blockquote>[Comentario real de un seguidor de @ritalabailaoramadrid]</blockquote><figcaption><span></span>[Nombre] · [@usuario]</figcaption></figure>
-      <figure class="quote"><blockquote>[Comentario real de un seguidor de @ritalabailaoramadrid]</blockquote><figcaption><span></span>[Nombre] · [@usuario]</figcaption></figure>
-      <figure class="quote"><blockquote>[Comentario real de un seguidor de @ritalabailaoramadrid]</blockquote><figcaption><span></span>[Nombre] · [@usuario]</figcaption></figure>
+      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>¡Una experiencia de 10! Muy buen ambiente, buena música y un trato excelente por parte de todo el personal.</blockquote><figcaption><span style="background:#7E57C2">A</span><em><b>Aitor L.</b> · Reseña en Google</em></figcaption></figure>
+      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>Se pasa un rato muy agradable en compañía del grupo en directo y la comida me sorprendió, ¡sobre todo la pizza!</blockquote><figcaption><span style="background:#7CA24A">R</span><em><b>Rosa María M.</b> · Reseña en Google</em></figcaption></figure>
+      <figure class="quote"><p class="stars" aria-label="5 de 5 estrellas">★★★★★</p><blockquote>Buen tardeo. Trabajo excepcional del personal.</blockquote><figcaption><span style="background:#3E8FA0">E</span><em><b>Eliseo R.</b> · Reseña en Google</em></figcaption></figure>
     </div>
     <div class="dots" aria-hidden="true"><span></span><em>Desliza para ver más →</em></div>
     <div class="logos"><p>CON EL APOYO DE</p><span>Ayuntamiento de Alcobendas</span><span>Cerveza Victoria Málaga</span><span>Buena Boca</span><span>Fourvenues</span></div>
